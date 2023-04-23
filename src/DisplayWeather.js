@@ -2,10 +2,10 @@ import React from "react";
 
 function DisplayWeather(props){
     const {data}=props;
-    console.log(data);
-    const iconUrl=""
+   
+
     return(
-        <div>
+        <div> { (data.cod!=404)? <>
             <div>
             <span>
                 {data.name} {data.sys.country}. weather{" "}
@@ -50,6 +50,12 @@ function DisplayWeather(props){
                 </tr>
                 
             </table>
+            </>
+            :<>
+            <h2>{data.message}</h2>
+            </>
+            }
+        
             
         </div>
     )
