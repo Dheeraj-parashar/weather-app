@@ -2,6 +2,7 @@ import React from "react";
 // import "./weather.css"
 import { useState } from "react";
 import DisplayWeather from "./DisplayWeather";
+import "./index.css"
 
 function Weather() {
     const APIKEY = "e3704b0f20560bef2046859b338956f8";

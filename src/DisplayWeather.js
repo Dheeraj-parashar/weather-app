@@ -6,7 +6,7 @@ function DisplayWeather(props){
 
     return(
         <div> { (data.cod!=404)? <>
-            <div>
+            <div className="output">
             <span>
                 {data.name} {data.sys.country}. weather{" "}
             </span>
@@ -18,6 +18,7 @@ function DisplayWeather(props){
             <span>{data.weather[0].description}</span>
             </div>
 
+        <div className="tableContainer">
             <table>
                 <tr>
                     <td>
@@ -34,7 +35,8 @@ function DisplayWeather(props){
                     </td>
                     <td>{data.main.pressure}</td>
                 </tr>
-
+            </table>
+            <table>
                 <tr>
                     <td>
                         <h4>Wind Speed</h4>
@@ -50,6 +52,7 @@ function DisplayWeather(props){
                 </tr>
                 
             </table>
+            </div>
             </>
             :<>
             <h2>{data.message}</h2>
