@@ -5,7 +5,7 @@ function DisplayWeather(props){
    
 
     return(
-        <div> { (data.cod!=404)? <>
+        <div> { (data.cod!==404)? <>
             <div className="output">
             <span>
                 {data.name} {data.sys.country}. weather{" "}
